@@ -25,6 +25,45 @@ public class Cliente {
 	@OneToMany
 	@JoinColumn(name="cliente_id")
 	private Set<Veiculo> veiculos = new HashSet<Veiculo>();
+
+	
+	
+	public Cliente() {
+	
+	}
+
+	
+	public Cliente(Long id, String nome, Set<Veiculo> veiculos) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.veiculos = veiculos;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Set<Veiculo> getVeiculos() {
+		return veiculos;
+	}
+
+	public void setVeiculos(Set<Veiculo> veiculos) {
+		this.veiculos = veiculos;
+	}
 	
 	
 	
